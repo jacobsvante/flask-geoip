@@ -32,19 +32,20 @@ class GeoIP(object):
 
     def init_app(self, app):
         app.config.setdefault('GEOIP_CACHE', pygeoip.STANDARD)
-        cache_setting = app.config['GEOIP_CACHE']
-        invalid_cache_setting_msg = ('{0} is not a valid GEOIP_CACHE setting! '
-                                     'The following are available: {1}')
+        cache_setting_name = app.config['GEOIP_CACHE']
+        cache_setting = CACHE_MAP.get(app.config['GEOIP_CACHE'])
 
-        if cache_setting not in CACHE_MAP.values():
-            error_args = (cache_setting, ', '.join(CACHE_MAP.keys()))
-            raise Exception(invalid_cache_setting_msg.format(*error_args))
+        if cache_setting_name not in CACHE_MAP.keys():
+            msg = ('{0} is not a valid GEOIP_CACHE setting! '
+                   'The following are available: {1}')
+            format_args = (cache_setting_name, ', '.join(CACHE_MAP.keys()))
+            raise RuntimeError(msg.format(*format_args))
 
         if 'GEOIP_FILEPATH' not in app.config:
-            raise Exception('You must specify GEOIP_FILEPATH.')
+            raise RuntimeError('You must specify GEOIP_FILEPATH.')
 
         self._instance = pygeoip.GeoIP(app.config['GEOIP_FILEPATH'],
-                                       app.config['GEOIP_CACHE'])
+                                       cache_setting)
 
 
         # Set pygeoip's public methods on the class
