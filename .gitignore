@@ -1,0 +1,13 @@
+.tox/
+*.egg-info/
+dist/
+MANIFEST
+.tox
+.python-version
+.env
+.venv
+.coverage
+*.DS_Store
+*.pyc
+*.sublime-project
+*.sublime-workspace
