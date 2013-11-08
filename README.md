@@ -1,4 +1,4 @@
-**Author:** Jacob Magnusson. [Follow me on Twitter](twitter)
+**Author:** Jacob Magnusson. [Follow me on Twitter](https://twitter.com/pyjacob)
 
 ## About
 
@@ -54,5 +54,3 @@ This readme.
 ## Credits
 
 Thanks go out to [maxmind](https://github.com/maxmind/geoip-api-c) and [appliedsec](https://github.com/appliedsec/pygeoip) for making these great libs.
-
-[twitter]: https://twitter.com/pyjacob
