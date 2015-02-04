@@ -1,4 +1,4 @@
-**Author:** Jacob Magnusson. [Follow me on Twitter](https://twitter.com/pyjacob)
+**Author:** Jacob Magnusson. [Follow me on Twitter](https://twitter.com/jacobsvante_)
 
 ## About
 
