@@ -31,7 +31,7 @@ class GeoIP(object):
             self.init_app(app)
 
     def init_app(self, app):
-        app.config.setdefault('GEOIP_CACHE', pygeoip.STANDARD)
+        app.config.setdefault('GEOIP_CACHE', 'STANDARD')
         cache_setting_name = app.config['GEOIP_CACHE']
         cache_setting = CACHE_MAP.get(app.config['GEOIP_CACHE'])
 
