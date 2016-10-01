@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 (2016-10-01)
+
+* Universal wheel
+
 ## 0.1.2
 
 **Date**: 2015-01-04
